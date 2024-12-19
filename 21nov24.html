@@ -23,24 +23,18 @@
             balance: '10000',
             rate: '9.5',
             period: '5',
-            result: 
-        }
+            result: function(){
+                for (let i=0; i < this.period; i++){
+                    this.balance += this.rate/100;
+                    document.write(i + ': ' + this.balance + "<br>")
+                }
+            }
+        };
 
-        let client2 = {
-            name: 'Бустер',
-            tel: '+8979775',
-            balance: '500',
-            rate: '14',
-            period: '7',
-        }
+        document.write(client1.name + " " + client1.tel + " " + client1.balance + "<br>);
+        client1.result();
 
-        let client3 = {
-            name: 'Круш Егор',
-            tel: '+8677996',
-            balance: '765884733',
-            rate: '21',
-            period: '15',
-        }
+      
 
         
      </script>
